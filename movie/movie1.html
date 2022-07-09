@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+      <link rel="stylesheet" href="movie.css">
+    
+  </head>
+
+  <body>
+    <section id="home">
+        <div class="main">
+          <h1 class="headings">영화 예매 하기</h1>
+        </div>
+      </section>
+    
+    
+    <section>
+        <div class="reserv_movie" id="reserv_movie">
+            <h1>예매 가능한 영화 리스트</h1>
+        </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory1.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="seat.html">예매하기</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory2.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory3.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory3.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory4.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory1.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory1.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory1.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <div class="box-img">
+                <img src="toystory1.jpeg">
+            </div>
+            <div class="content">
+                <h3>toy story4</h3>
+                <p>imdb 7.4/10</p>
+            </div>
+            <div class="button">
+                <li><a class="b1" href="#">watch now</a></li>
+                <li><a class="b1" href="#">download</a></li>
+            
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        // speed: 1000,
+        // autoplay: {
+        //     delay: 2000
+        // },
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    
+  </body>
+</html>
