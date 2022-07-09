@@ -398,4 +398,12 @@ html{
     font-size:1em
 }
 
+.contact_title{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+    position: relative ;
+    top:20px;
 
+}
