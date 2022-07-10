@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 540px;
+    height: 840px;
     justify-content: center;
     color: white;
     align-items: center;
@@ -63,7 +63,7 @@
     top: 0;
     right: 0;
     background: url("../picture/masthead.jpg") no-repeat center center/cover;
-    height: 600px;
+    height: 900px;
     width: 100%;
     z-index: -1;
     opacity: .8;
@@ -76,7 +76,7 @@
     align-items: center;
     position: absolute;
     top: 30%;
-    right: 40%;
+    /* right: 40%; */
 }
 
 .headings{
@@ -87,22 +87,6 @@
 
 }
 
-.btn{
-    padding: 10px 35px;
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    outline: none;
-    transition:  .6s ease;
-}
-
-.btn:hover{
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 5px white, 0 0 10px white 0 0 15px white;
-    font-weight: bold;
-}
 
 /* about section */
 #about{
