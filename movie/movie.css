@@ -127,7 +127,7 @@ padding: 15px 0;
       }
 
       body {
-        background-image: url(../picture/galaxy.webp);  
+        background-image: url(./galaxy.webp);  
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #000;
