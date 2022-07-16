@@ -345,6 +345,7 @@ a:hover {
     margin:5rem auto 0 auto;
     text-align: center;
     align-items: center;
+    top: -40px;
     
 }
 
@@ -387,6 +388,7 @@ a:hover {
 .section-contact .section-contact-para-small {
     margin-top: 2rem;
     font-size:1em;
+    top: -40px;
 }
 
 
