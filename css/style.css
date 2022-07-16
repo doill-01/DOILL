@@ -174,7 +174,7 @@ a:hover {
     flex-direction: column;
     background-color: black;
     box-sizing: border-box;
-    padding: 90px;
+/*     padding: 90px; */
     margin-bottom: 50px;
     align-items: center;
 }
