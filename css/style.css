@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -78,9 +80,11 @@
 
 .headings{
     font-family: century;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin: 40px 0px;
+    /* margin: 40px 0px; */
+    margin-bottom: 30px;
+    
 
 }
 
@@ -125,6 +129,7 @@
 
 .heading-lv2 {
     font-size: 24px;
+    
 }
 
 .heading-lv3 {
@@ -143,6 +148,7 @@
 
 .text-center {
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .profile-image {
@@ -166,18 +172,19 @@ a:hover {
 #portfolio{
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 90px;
+    margin-bottom: 50px;
     align-items: center;
-    padding: 20px;
-
 }
 
-.gallery{
+/* .gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     box-sizing: border-box;
+    margin-bottom: 100px;
 }
 
 .gallery img{
@@ -193,8 +200,96 @@ a:hover {
 
 html{
     scroll-behavior: smooth;
-}
+} */
 
+.product-list {
+    background-color: #dfe6e9;
+    padding: 3em;
+  }
+  
+  .product-list .card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0px 10px 5px #b2bec3;
+    text-align: center;
+    font-family: "Poppins";
+  }
+  
+  .card .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card img {
+    width: 406px;
+    height: 306px;
+    border-radius: 5px;
+  }
+
+  
+  .card .text {
+    text-align: left;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    font-size: 12px;
+  }
+  
+  .buy-button {
+    background-color: #f9ca24;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+  }
+  .buy-button:hover {
+    box-shadow: 0px 5px 5px #b2bec3;
+    color: #eb4d4b;
+  }
+  
+  .product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+ 
+  
+  .card:hover img {
+    transform: scale(1.1);
+    transition: 1s ease;
+  }
+  
+  .card .details {
+    position: relative;
+    top: 50px;
+    transition: 2s ease;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .card:hover .details {
+    opacity: 1;
+    visibility: visible;
+    top: 15px;
+    transition: 2s ease;
+  }
+
+  
+  .card:hover .text,
+  .card:hover .title {
+    opacity: 0;
+    transition: 1 ease;
+  }
+  
+
+  
 
 /* skills */
 #skill{
@@ -264,12 +359,16 @@ html{
 
 .section-contact .section-contact-para-wrapper {
     margin-top: 3rem;
-    font-size:1.5em
+    font-size:1.5em;
+    
 }
 
 .section-contact .section-contact-btn-wrapper {
     position: relative;
-    margin:5rem auto 0 auto
+    margin:5rem auto 0 auto;
+    text-align: center;
+    align-items: center;
+    
 }
 
 .section-contact .section-contact-btn {
@@ -284,31 +383,33 @@ html{
     border-radius: 3px;
     text-transform: uppercase;
     -webkit-transition: all .5s;
-    transition:all .5s
+    transition:all .5s;
 }
 
 .section-contact .section-contact-btn .btn-icon {
     color: #2F2F2F;
     -webkit-transition: all .5s;
-    transition:all .5s
+    transition:all .5s;
+    
 }
 
 .section-contact .section-contact-btn:hover {
     background: #2F2F2F;
-    color:#fff
+    color:#fff;
+    text-align: center;
 }
 
 .section-contact .section-contact-btn:hover .btn-icon {
-    color:#fff
+    color:#fff;
 }
 
 .section-contact .section-contact-btn-icon {
-    margin-right:.7rem
+    margin-right:.7rem;
 }
 
 .section-contact .section-contact-para-small {
     margin-top: 2rem;
-    font-size:1em
+    font-size:1em;
 }
 
 
@@ -320,3 +421,4 @@ html{
     top:20px;
 
 }
+
