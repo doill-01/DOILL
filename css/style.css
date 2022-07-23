@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nanum+Pen+Script&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: large;
     
 }
 
@@ -144,10 +149,10 @@
     line-height: 1.5;
 }
 
-.text-center {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-}
+.text text-center{
+    font-family: 'Anton', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+} 
 
 .profile-image {
     margin: 16px 0 0;
