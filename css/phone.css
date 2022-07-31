@@ -1,0 +1,13 @@
+#home{
+    height: 820px;
+}
+
+.headings{
+    font-size: 1.7rem;
+}
+
+.card img{
+    width: 275px;
+    height: 150px;
+    margin: 10px;
+}
