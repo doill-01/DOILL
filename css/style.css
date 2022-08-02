@@ -183,7 +183,7 @@
 
 .text-center {
     text-align: center;
-    font-family: 'Nanum Pen Script', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, Hiragino Kaku Gothic ProN, Hiragino Sans, Yu Gothic Medium, Yu Gothic, sans-serif;
     font-size: 150%;
 }
 
