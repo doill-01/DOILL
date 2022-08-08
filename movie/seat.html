@@ -1,114 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="seat.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="t.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <title>Movie Seat Booking</title>
-  </head>
-  <body>
-    <div class="movie-container">
-      <label>Pick a movie:</label>
-      <select id="movie">
-        <option value="7000">Toy Story 1 (7000₩)</option>
-        <option value="8000">Toy Story 2 (8000₩)</option>
-        <option value="9000">Toy Story 3 (9000₩)</option>
-        <option value="9000">Toy Story 4 (9000₩)</option>
-        <option value="5000">Mickey mouser (9000₩)</option>
-        <option value="10000">Buzz Lightyear (10000₩)</option>
-        <option value="10000">Jurassic park (10000₩)</option>
-        <option value="10000">Lion king (10000₩)</option>
-      </select>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+
+ <script>
+  var dateToday = new Date();
+  var searchMaxDate = "1w";
+  $(function() {
+   $( "#dtb_yr" ).datepicker({
+    minDate: dateToday,
+    maxDate: searchMaxDate,
+     onSelect: function(d,i){
+          if(d !== i.lastVal){
+              $(this).change();
+          }
+     }
+});
+ });
+ </script>
+</head>
+<body>
+    
+    <h1>Doill Theater</h1>
+
+    <div class="wrapper">
+
+        <div class="movie-selection">
+
+            <div class="movie-container">
+                <label>Select date</label>
+                
+                <input type="text" name="dtb_yr" id="dtb_yr" placeholder="Select Date" />
+                
+                <label>Select the movie</label>
+               
+                <select id="movie">
+                    <option value="7000">Toy Story 1 (7000₩)</option>
+                    <option value="8000">Toy Story 2 (8000₩)</option>
+                    <option value="9000">Toy Story 3 (9000₩)</option>
+                    <option value="9000">Toy Story 4 (9000₩)</option>
+                    <option value="5000">Mickey mouser (9000₩)</option>
+                    <option value="10000">Buzz Lightyear (10000₩)</option>
+                    <option value="10000">Jurassic park (10000₩)</option>
+                    <option value="10000">Lion king (10000₩)</option>
+                </select>
+            </div>
+
+            <div class="summary-container">
+                <div class="items">
+                    <p class="text seats-number">좌석 수</p>
+                    <p class="text seats-premium-number">프리미엄 좌석</p>
+                    <p class="text ticket-price">티켓가격</p>
+                    <p class="text ticket-premium-price">프리미엄티켓 가격</p>
+                    <p class="text total-price">총합</p>
+                </div>
+                <div class="totals">
+                    <p class="number seats-number" id="count">0</p>
+                    <p class="number seats-premium-number" id="countpremium">0</p>
+                    <p class="number ticket-price" id="price">0</p>
+                    <p class="number ticket-premium-price" id="premiumprice">0</p>
+                    <p class="number total-price" id="total">0</p>
+                </div>
+                
+            </div>
+
+            <div class="commands-container">
+                <button id="resetselection"><span style="color: tomato;"><i class="fa fa-times-circle"></i></span>
+                     Reset</button>
+                <button id="confirmselection"><span style="color:limegreen;"><i class="fa fa-pound-sign"></i></span> Pay</button>
+            </div>
+    
+        </div>
+        
+        <div class="seat-selection">
+            <div class="cinema-container">
+            
+                <div class="screen" id="screen"></div>
+        
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+
+                <!-- Premium seats central -->
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+
+                <!-- Normal seats -->
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+            </div>
+        
+            <div class="showcase">
+                <ul class="row-showcase">
+                    <li>
+                        <div class="seat"></div>
+                        <small>Free</small>
+                    </li>
+                    <li>
+                        <div class="seat premium-seat"></div>
+                        <small>Premium seat</small>
+                    </li>
+                </ul>
+                <ul class="row-showcase">
+                    <li>
+                        <div class="seat selected"></div>
+                        <small>Selected</small>
+                    </li>
+                    <li>
+                        <div class="seat occupied"></div>
+                        <small>Occupied</small>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
     </div>
 
-    <ul class="showcase">
-      <li>
-        <div class="seat"></div>
-        <small>N/A</small>
-      </li>
-
-      <li>
-        <div class="seat selected"></div>
-        <small>Selected</small>
-      </li>
-
-      <li>
-        <div class="seat occupied"></div>
-        <small>Occupied</small>
-      </li>
-    </ul>
-
-    <div class="container">
-      <div class="screen"></div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-      </div>
-
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-      </div>
-    </div>
-
-    <p class="text">
- 선택하신<span id="count">0</span>개의 좌석 가격은 ₩<span id="total">0</span>입니다    </p>
-    <script src="seat.js"></script>
-  </body>
+    <script src="../www.js"></script>
+</body>
 </html>
