@@ -71,15 +71,7 @@ function populateUI() {
 
         if (!(localStorage.getItem('selectedSeats_'+movieList[movieIndex][1]) === null) || localStorage.getItem('selectedSeats_'+movieList[movieIndex][1]).length > 0) {
 
-            const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats_'+movieList[movieIndex][1]));
-
-            if (selectedSeats !== null && selectedSeats.length > 0) {
-                seats.forEach((seat, index) => {
-                    if(selectedSeats.indexOf(index) > -1) {
-                        seat.classList.add('selected');
-                    }
-                });
-            }
+ 
         }
 
         if (!(localStorage.getItem('selectedPremiumSeats_'+movieList[movieIndex][1]) === null) || localStorage.getItem('selectedPremiumSeats_'+movieList[movieIndex][1]).length > 0) {
