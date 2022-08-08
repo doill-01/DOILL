@@ -59,7 +59,56 @@ function setMovieData(movieIndex, moviePrice) {
 // ----------------------
 // POPULATE UI
 // Get data from localStorage and populate the UI
+function populateUI() {
 
+    if (localStorage.length > 0) {
+
+        const movieIndex = localStorage.getItem('selectedMovieIndex');
+
+        if (movieIndex !== null) {
+            movieSelect.selectedIndex = movieIndex;
+        }
+
+        if (!(localStorage.getItem('selectedSeats_'+movieList[movieIndex][1]) === null) || localStorage.getItem('selectedSeats_'+movieList[movieIndex][1]).length > 0) {
+
+        const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats_'+movieList[movieIndex][1]));
+
+        if (selectedSeats !== null && selectedSeats.length > 0) {
+                seats.forEach((seat, index) => {
+                    if(selectedSeats.indexOf(index) > -1) {
+                        seat.classList.add('selected');
+                    }
+                });
+            }
+        }
+
+        if (!(localStorage.getItem('selectedPremiumSeats_'+movieList[movieIndex][1]) === null) || localStorage.getItem('selectedPremiumSeats_'+movieList[movieIndex][1]).length > 0) {
+            
+        const selectedPremiumSeats = JSON.parse(localStorage.getItem('selectedPremiumSeats_'+movieList[movieIndex][1]));
+
+        if (selectedPremiumSeats !== null && selectedPremiumSeats.length > 0) {
+                seats.forEach((seat, index) => {
+                    if(selectedPremiumSeats.indexOf(index) > -1) {
+                        seat.classList.add('selected-premium');
+                    }
+                });
+            }
+        }
+
+        if (!(localStorage.getItem('occupiedSeats_'+movieList[movieIndex][1]) === null) || localStorage.getItem('occupiedSeats_'+movieList[movieIndex][1]).length > 0) {
+            
+            const occupiedSeats = JSON.parse(localStorage.getItem('occupiedSeats_'+movieList[movieIndex][1]));
+            
+        if (occupiedSeats !== null && occupiedSeats.length > 0) {
+                seats.forEach((seat, index) => {
+                    if(occupiedSeats.indexOf(index) > -1) {
+                        seat.classList.add('occupied');
+                    }
+                });
+            }
+        }
+    }
+};
 
 // ----------------------
 // UPDATE SELECTED COUNT AND TOTAL
