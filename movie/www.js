@@ -141,10 +141,10 @@ function updateSelectedCountAndTotal() {
         countpremium.innerText = selectedPremiumSeatsCount;
 
         const moviePrice = +localStorage.getItem('selectedMoviePrice');
-        price.innerText = "₩" + moviePrice
-        premiumprice.innerText = "₩" + (moviePrice * 1.25);
+        price.innerText = "£" + moviePrice.toFixed(2);
+        premiumprice.innerText = "£" + (moviePrice * 1.25).toFixed(2);
 
-        total.innerText = "₩" + (+(selectedSeatsCount * moviePrice + moviePrice * 1.25 * selectedPremiumSeatsCount));
+        total.innerText = "£" + (+(selectedSeatsCount * moviePrice + moviePrice * 1.25 * selectedPremiumSeatsCount)).toFixed(2);
 
         if (!(movieIndex == 0)) {
             document.getElementById('screen').innerHTML = movieList[movieIndex][0];
@@ -252,3 +252,4 @@ function confirmSelection() {
         }
     });
 };
+
