@@ -13,21 +13,7 @@
 
 
 
- <script>
-  var dateToday = new Date();
-  var searchMaxDate = "1w";
-  $(function() {
-   $( "#dtb_yr" ).datepicker({
-    minDate: dateToday,
-    maxDate: searchMaxDate,
-     onSelect: function(d,i){
-          if(d !== i.lastVal){
-              $(this).change();
-          }
-     }
-});
- });
- </script>
+
 </head>
 <body>
     
@@ -200,5 +186,21 @@
     </div>
 
     <script src="aaa.js"></script>
+    
+     <script>
+  var dateToday = new Date();
+  var searchMaxDate = "1w";
+  $(function() {
+   $( "#dtb_yr" ).datepicker({
+    minDate: dateToday,
+    maxDate: searchMaxDate,
+     onSelect: function(d,i){
+          if(d !== i.lastVal){
+              $(this).change();
+          }
+     }
+});
+ });
+ </script>
 </body>
 </html>
