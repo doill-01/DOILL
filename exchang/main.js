@@ -1,10 +1,10 @@
 const currencyRatio = {
-    VND: {
-      USD: 0.000043,
-      KRW: 0.051,
-      VND: 1,
-      unit: "동",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2560px-Flag_of_Vietnam.svg.png",
+  JPY: {
+      USD: 0.0074,
+      KRW: 9.73,
+      JPY: 1,
+      unit: "앤",
+      img: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Japan_%28bordered%29.svg",
     },
     USD: {
       USD: 1,
