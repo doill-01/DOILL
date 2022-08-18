@@ -16,7 +16,7 @@ const currencyRatio = {
     KRW: {
       USD: 0.00085,
       KRW: 1,
-      JPY: 19.47,
+      JPY: 0.10,
       unit: "원",
       img: "https://cdn.countryflags.com/thumbs/south-korea/flag-400.png",
     },
