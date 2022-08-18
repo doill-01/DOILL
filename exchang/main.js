@@ -9,14 +9,14 @@ const currencyRatio = {
     USD: {
       USD: 1,
       KRW: 1182.35,
-      VND: 23235.5,
+      JPY: 23235.5,
       unit: "달러",
       img: "https://cdn-icons-png.flaticon.com/512/555/555526.png",
     },
     KRW: {
       USD: 0.00085,
       KRW: 1,
-      VND: 19.47,
+      JPY: 19.47,
       unit: "원",
       img: "https://cdn.countryflags.com/thumbs/south-korea/flag-400.png",
     },
